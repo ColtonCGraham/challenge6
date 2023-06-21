@@ -1,24 +1,27 @@
-<div id="<%= dom_id customer %>">
-  <p>
-    <strong>Name:</strong>
-    <%= customer.name %>
-  </p>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <p>
+<div class = "person "id="<%= dom_id customer %>">
+  <h2>
+    <%= customer.name %>
+  </h2>
+
+
+    <p class = "image">
+  <%=image_tag customer.image, style: "width: 272px;"%>
+  </p>
+    <p >
+      <%= link_to "Show this customer", customer %>
+    </p>
+
+    <p>
     <strong>Number:</strong>
     <%= customer.number %>
   </p>
+
 
   <p>
     <strong>Email:</strong>
     <%= customer.email %>
   </p>
 
-  <p>
-    <strong>Notes:</strong>
-    <%= customer.notes %>
-  </p>
-  <p>
-  <%=image_tag customer.image, style: "width: 200px; display:block"%>
-  </p>
 </div>
