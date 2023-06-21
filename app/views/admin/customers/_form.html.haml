@@ -1,0 +1,8 @@
+= semantic_form_for [:admin, @customer], builder: ActiveAdmin::FormBuilder do |f|
+  = f.inputs do
+    = f.input :name
+    = f.input :email
+    = f.input :number
+    = f.input :notes
+    = f.input :image, as: :file
+    = f.actions
