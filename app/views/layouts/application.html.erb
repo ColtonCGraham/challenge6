@@ -9,8 +9,14 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <body>
+    <div>
+      <%= link_to "All Customers", customers_path %>
+       <%= link_to "Alphabetized Customers",alphabetized_customers_path %>
+      <%= link_to "Missing Email Customers",missing_email_customers_path %>
+      <%= link_to "Admin - admin@example.com - password",admin_user_session_path %>
+    </div>
     <%= yield %>
   </body>
 </html>
