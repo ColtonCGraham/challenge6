@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Alphabetized Customers</h1>
+<%sorted = Customer.where(email: [nil,""])%>
+<%= link_to "New customer", new_customer_path %>
+<div id="customers">
+  <% sorted.each do |customer| %>
+    <%= render customer %>
+  <% end %>
+</div>
+
